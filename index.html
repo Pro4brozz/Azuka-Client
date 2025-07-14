@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azuka Client</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="iconka.ico">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <a href="#" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="300" height="60" viewBox="0 0 300 60" fill="none">
+                        <defs>
+                            <!-- Фильтр для неонового свечения -->
+                            <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%"
+                                color-interpolation-filters="sRGB">
+                                <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="white" flood-opacity="0.8" />
+                                <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="white" flood-opacity="0.5" />
+                                <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="white" flood-opacity="0.2" />
+                            </filter>
+                            <!-- Фильтр для "дыма" -->
+                            <filter id="smoke" x="0" y="0" width="150%" height="150%">
+                                <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="turb" />
+                                <feDisplacementMap in="SourceGraphic" in2="turb" scale="10" xChannelSelector="R"
+                                    yChannelSelector="G" />
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feComposite operator="in" in="blur" in2="SourceAlpha" />
+                                <feComponentTransfer>
+                                    <feFuncA type="linear" slope="0.3" />
+                                </feComponentTransfer>
+                            </filter>
+                        </defs>
+
+                        <!-- Дым (на самом деле смещённый текст АС с фильтром) -->
+                        <text x="15" y="45" font-family="Segoe UI, Arial, sans-serif" font-size="48" fill="white"
+                            opacity="0.15" filter="url(#smoke)" letter-spacing="2">
+                            АС
+                        </text>
+
+                        <!-- Неоновый текст АС поверх -->
+                        <text x="10" y="40" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="900"
+                            fill="white" filter="url(#neonGlow)" letter-spacing="2">
+                            АС
+                        </text>
+
+                        <!-- Твой текст справа -->
+                        <text x="110" y="40" fill="white" font-family="Segoe UI, Arial, sans-serif" font-size="24"
+                            font-weight="900" letter-spacing="1">
+                            Azuka Client
+                        </text>
+                    </svg>
+
+
+                    </text>
+                    </svg>
+
+                    <path
+                        d="M25.5894 13.3611H21.321L24.2913 10.3962L21.0165 7.11607L18.1584 9.97416V6.41089H13.5267V10.1344L10.8448 7.45797L7.57005 10.7328L10.2038 13.3611H6.41614V17.9982H10.1343L7.45787 20.6747L10.7327 23.9495L13.5267 21.1608V25.5842H18.1584V21.3211L21.1287 24.2914L24.4034 21.0166L21.3904 17.9982H25.5894V13.3611Z"
+                        fill="#FC4A22"></path>
+                    </svg>
+
+                    <path
+                        d="M44.2695 7.57879H47.0878V21.5621H44.1549V19.7682C43.0429 21.1733 41.4321 21.8753 39.3237 21.8753C37.3681 21.8942 35.7192 21.1922 34.3779 19.7682C33.0356 18.3442 32.3841 16.6166 32.4223 14.5852C32.4223 12.497 33.0791 10.7546 34.3917 9.35902C35.7043 7.96343 37.349 7.26562 39.3237 7.26562C41.5276 7.26562 43.1766 8.03489 44.2695 9.57236V7.57879ZM43.8409 14.5852C43.8409 13.1234 43.4238 11.9936 42.5898 11.196C41.7558 10.3984 40.7541 10.0001 39.5848 10.0001C38.3581 10.0001 37.3278 10.4373 36.4938 11.3106C35.6597 12.1839 35.2427 13.2757 35.2427 14.5862C35.2427 15.8967 35.6597 17.0075 36.4938 17.8619C37.3278 18.7163 38.3581 19.1429 39.5848 19.1429C40.8114 19.1429 41.7558 18.7446 42.5898 17.947C43.4238 17.1494 43.8409 16.0291 43.8409 14.5862V14.5852Z"
+                        fill="#FFF"></path>
+                    </svg>
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li>Первый</li>
+                        <li>онлайн</li>
+                        <li>инжектор
+                        <li>в Снг пространстве</li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-left">
+                        <div class="subtitle">Наша мисия</div>
+                        <h1 class="title">Мощный инжектор<br> с поддержкой всех скриптов.<br> Передовые функции<br>
+                            для геймеров.
+                        </h1>
+                        <a href="ckam.html" target="_blank" class="btn">
+                            <span>Скачать</span> </a>
+                        <div class="r2">
+                            <h1>Почему мы?</h1>
+                            <div class="r3">
+                                <h3>Встроены:</h3>
+                                <ul>
+                                    <li> anti-kick</li>
+                                    <li> fly</li>
+                                    <li> noclip</li>
+                                    <li> infinity jump</li>
+                                </ul>
+                                <h3>Поддерживаются:</h3>
+                                <ul>
+                                    <li> Arceus X Neo</li>
+                                    <li> Xeno</li>
+                                    <li> Delta Executor</li>
+                                    <li> Fluxus</li>
+                                    <li> Solara</li>
+                                    <li> Synapse Z</li>
+                                </ul>
+                                <h3>Оптимизация:</h3>
+                                <p>
+                                <div class="r3_1">
+                                    <b>Благодаря тому, что это онлайн-инджектор, а не ПО, вы можете забыть про 10 FPS
+                                        <p> и
+                                            насладиться приятной игрой.
+                                    </b>
+                                </div>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+                        <h1>Играй на новом уровне с Azuka Client !</h1>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">Copyright © 2025.</footer>
+</body>
+
+</html>
